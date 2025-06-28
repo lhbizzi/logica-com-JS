@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <div id="output"></div>
+    <script>
+      let op = prompt("Selecione a operação (+, -, *, /):");
+      let num1 = parseFloat(prompt("num1:"));
+      let num2 = parseFloat(prompt("num2:"));
+      let resultado = 0;
+
+      calcular(op, num1, num2);
+
+      document.getElementById(
+        "output"
+      ).innerHTML = `O resultado de ${num1} ${op} ${num2} = ${resultado}`;
+
+      function calcular(op, num1, num2) {
+        if (op != "+" && op != "-" && op != "*" && op != "/") {
+          correctOP();
+        } else {
+          switch (op) {
+            case "+":
+              resultado = num1 + num2;
+              break;
+            case "-":
+              resultado = num1 - num2;
+              break;
+            case "*":
+              resultado = num1 * num2;
+              break;
+            case "/":
+              resultado = num1 / num2;
+              break;
+          }
+        }
+      }
+
+      function correctOP() {
+        do {
+          op = prompt(
+            "O símbolo da operação é inválido, selecione novamente (+, -, *, /): "
+          );
+        } while (op != "+" && op != "-" && op != "*" && op != "/");
+      }
+    </script>
+  </body>
+</html>

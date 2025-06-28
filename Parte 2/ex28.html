@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <div id="output"></div>
+    <script>
+      class Contador {
+        #Contador;
+        constructor() {
+          this.#Contador = 0;
+        }
+        incrementar() {
+          this.#Contador++;
+        }
+        getContador() {
+          return this.#Contador;
+        }
+      }
+      const contador = new Contador();
+      contador.incrementar();
+      console.log(contador.getContador());
+
+      contador.incrementar();
+      console.log(contador.getContador());
+
+      contador.incrementar();
+      console.log(contador.getContador());
+    </script>
+  </body> 
+</html>

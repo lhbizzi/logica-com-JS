@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <button onclick="Calculate('+')">+</button>
+    <button onclick="Calculate('-')">-</button>
+    <button onclick="Calculate('*')">*</button>
+    <button onclick="Calculate('/')">/</button>
+    <div id="output"></div>
+    <script>
+      let num = parseFloat(prompt("Informe um número: "));
+
+      show();
+
+      function show() {
+        let output = document.querySelector("#output");
+        output.innerHTML = num;
+      }
+      function Calculate(a) {
+        let num2 = parseFloat(
+          prompt("Por qual número deseja fazer esta operacão?")
+        );
+        switch (a) {
+          case "+":
+            num += num2;
+            break;
+          case "-":
+            num -= num2;
+            break;
+          case "*":
+            num *= num2;
+            break;
+          case "/":
+            num /= num2;
+            break;
+          default:
+            "error!";
+            break;
+        }
+        show();
+      }
+    </script>
+  </body>
+</html>

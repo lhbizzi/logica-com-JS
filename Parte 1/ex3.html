@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <script>
+      let n1 = parseInt(prompt("Jogador 1, informe seu número: "));
+      let n2 = parseInt(prompt("Jogador 2, informe seu número: "));
+
+      if (n1 == n2) {
+        alert("Os números são iguais! Empate!");
+      } else {
+        sorteio = parseInt(Math.random() * 2);
+        if ((sorteio == 0 && n1 < n2) || (sorteio == 1 && n1 > n2)) {
+          alert("Jogador 1 é o vencedor!");
+        } else {
+          alert("Jogador 2 é o vencedor!");
+        }
+      }
+    </script>
+  </body>
+</html>

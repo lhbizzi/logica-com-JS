@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <script>
+      const enderecos = {
+        rua: "Rua das Tulias",
+        numero: 302,
+      };
+
+      const pessoa = {
+        nome: "João",
+        sobrenome: "Fagundes",
+        enderecos,
+      };
+
+      document.write(
+        "O endereço de " +
+          pessoa.nome +
+          " " +
+          pessoa.sobrenome +
+          " é: " +
+          pessoa.enderecos.rua +
+          ", " +
+          pessoa.enderecos.numero +
+          "."
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <script>
+      let values = [6, 9, 12, NaN, 18, 21, 24, 27, 30];
+      let resp = false;
+
+      for (let i = 0; i < values.length; i++) {
+        if (values[i] === null || values[i] === undefined || isNaN(values[i])) {
+          //NaN não é necessariamente igual a ele mesmo, portanto values[i] === NaN, retorna falso
+          console.log(values[i]);
+          resp = true;
+          break;
+        }
+      }
+      alert(resp);
+    </script>
+  </body>
+</html>

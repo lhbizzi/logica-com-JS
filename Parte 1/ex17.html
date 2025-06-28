@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <script>
+      let carro = {
+        modelo: "X5",
+        marca: "BMW",
+        ano: 2023,
+        km: 10000,
+        combustivel: "Gasolina",
+        litrosConsumidos: 625,
+      };
+      let kmPorLitro = carro.km / carro.litrosConsumidos;
+
+      document.write(
+        "O carro " +
+          carro.marca +
+          carro.modelo +
+          ", ano " +
+          carro.ano +
+          ", percorreu um total de " +
+          carro.km +
+          " km, e consumiu " +
+          carro.litrosConsumidos +
+          " L. Portanto, o consumo por litro é: " +
+          kmPorLitro
+      );
+    </script>
+  </body>
+</html>

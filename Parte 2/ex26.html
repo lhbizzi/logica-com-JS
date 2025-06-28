@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <div id="output"></div>
+    <script>
+      class Produto {
+        constructor(nome, qtdEstoque) {
+          this.nome = nome;
+          this.qtdEstoque = qtdEstoque < 0 ? 0 : qtdEstoque;
+          console.log(
+            `Produto ${this.nome} criado com ${this.qtdEstoque} unidades em estoque.`
+          );
+        }
+
+        comprar(qtdComprada) {
+          if (qtdComprada > this.qtdEstoque) {
+            throw new Error("Estoque insuficiente!");
+          }
+          console.log("Quantidade comprada: " + qtdComprada);
+          this.qtdEstoque -= qtdComprada;
+          console.log(this.qtdEstoque);
+        }
+
+        adicionar(qtdAdicionada) {
+          console.log("Quantidade adicionada: " + qtdAdicionada);
+          this.qtdEstoque += qtdAdicionada;
+        }
+
+        show(nome, qtdEstoque) {
+          this.qtdEstoque === 1
+            ? console.log(
+                `O produto de nome ${this.nome} tem ${this.qtdEstoque} unidade em estoque.`
+              )
+            : console.log(
+                `O produto de nome ${this.nome} tem ${this.qtdEstoque} unidades em estoque.`
+              );
+        }
+      }
+
+      const lapis = new Produto("lapis", 10);
+      const caneta = new Produto("caneta", 20);
+    </script>
+  </body>
+</html>

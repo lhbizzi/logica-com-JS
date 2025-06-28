@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <script>
+      let num = [1, "2", 3, "4", 5, "6", 7, "8", 9, "10"];
+      let soma = 0;
+
+      for (let i = 0; i < num.length; i++) {
+        if (typeof num[i] === "number") {
+          soma += num[i];
+        }
+        // else { -> na correção, nn precisava fazer isso
+        //     num[i] = parseInt(num[i])// converte para inteiro
+        //     soma += num[i]
+        // }
+      }
+      alert("A soma dos valores é: " + soma);
+    </script>
+  </body>
+</html>

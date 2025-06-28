@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <div id="output"></div>
+    <script>
+      class Aluno {
+        constructor(nome, curso) {
+          this.nome = nome;
+          this.curso = curso;
+          this.notas = [];
+        }
+
+        informarNotas(n1, n2, n3, n4) {
+          let notas = [n1, n2, n3, n4];
+        }
+
+        #calculaMedia() {
+          let notas = this.notas;
+          let soma = notas.reduce((acc, nota) => acc + nota, 0);
+          let media = soma / notas.length;
+          return media;
+        }
+
+        showMedia() {
+          if (this.notas.length == 0) {
+            console.log(
+              `As notas de ${this.nome} no curso de ${this.curso} ainda nao foi informada.`
+            );
+            return;
+          }
+          let media = this.calculaMedia();
+          console.log(
+            `A media de ${this.nome} no curso de ${this.curso} é ${media}`
+          );
+        }
+      }
+      const Joaquim = new Aluno("Joaquim", "Informática");
+      Joaquim.informarNotas(10, 10, 2, 2);
+      Joaquim.media();
+      const Maria = new Aluno("Maria", "Administração");
+      Maria.informarNotas([10, 10, 10, 10]);
+      Maria.media();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <button onclick="soma()">+</button>
+    <button onclick="subtração()">-</button>
+    <button onclick="multiplicação()">*</button>
+    <button onclick="divisao()">/</button>
+    <div id="output"></div>
+    <script>
+      let num = parseFloat(prompt("Informe um número: "));
+
+      mostra();
+
+      function mostra() {
+        let output = document.querySelector("#output");
+        output.innerHTML = num;
+      }
+
+      function soma() {
+        let num2 = parseFloat(prompt("Por qual número deseja somar?"));
+        num += num2;
+        mostra();
+      }
+
+      function subtração() {
+        let num2 = parseFloat(prompt("Por qual número deseja somar?"));
+        num -= num2;
+        mostra();
+      }
+
+      function multiplicação() {
+        let num2 = parseFloat(prompt("Por qual número deseja somar?"));
+        num *= num2;
+        mostra();
+      }
+
+      function divisao() {
+        let num2 = parseFloat(prompt("Por qual número deseja somar?"));
+        num /= num2;
+        mostra();
+      }
+    </script>
+  </body>
+</html>

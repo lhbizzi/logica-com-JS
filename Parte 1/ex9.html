@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <button onclick="Again()">Again</button>
+    <div id="output"></div>
+    <script>
+      let larg = parseFloat(prompt("Give the width: "));
+      let alt = parseFloat(prompt("Give the height "));
+      let resp = larg * alt;
+
+      try {
+        area(larg, alt);
+      } catch (err) {
+        alert(err);
+      }
+
+      function Again() {
+        larg = parseFloat(prompt("Give the width: "));
+        alt = parseFloat(prompt("Give the height "));
+        try {
+          area(larg, alt);
+        } catch (err) {
+          alert(err);
+        }
+      }
+
+      function area(larg, alt) {
+        Show(resp);
+      }
+
+      function Show() {
+        document.write("The area of the rectangle is: " + resp);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <script>
+      let ano = 1004;
+
+      while (ano <= 2017) {
+        if (!(ano % 100 === 0) || ano % 400 === 0) {
+          document.write("<br>" + ano + " Obs: este ano é bissexto!");
+        } else {
+          document.write("<br>" + ano + " Obs: este ano não é bissexto!");
+        }
+      }
+
+      ano += 4;
+    </script>
+  </body>
+</html>

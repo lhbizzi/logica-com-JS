@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <label
+      >Informe o raio do círculo:
+      <input type="number" id="raio" />
+    </label>
+    <button onclick="calculateArea()">Calcular area</button>
+    <br />
+    <output id="output"></output>
+
+    <script>
+      const raio = document.getElementById("raio");
+      const output = document.getElementById("output");
+      function calculateArea() {
+        let raioValue = parseFloat(raio.value);
+        let area = Math.PI * raioValue ** 2;
+        output.innerHTML = `<br>A area do circulo de raio ${raioValue}, é: ${area.toFixed(
+          2
+        )}`;
+      }
+    </script>
+  </body>
+</html>

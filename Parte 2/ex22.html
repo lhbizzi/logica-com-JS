@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <div id="output"></div>
+    <script>
+      let num1 = parseFloat(prompt("num1:"));
+      let num2 = parseFloat(prompt("num2:"));
+      let resultado = 0;
+
+      soma(num1, num2);
+
+      document.getElementById(
+        "output"
+      ).innerHTML = `A soma de ${num1} e ${num2} é: ${resultado}`;
+
+      function soma(num1, num2) {
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+        return (resultado = num1 + num2);
+      }
+    </script>
+  </body>
+</html>

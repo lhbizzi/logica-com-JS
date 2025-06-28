@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <script>
+      let num = [6, 9, 12, 15, 18, 21, 24, 27, 30, 33];
+      let imp = [];
+      let cont = 0;
+      let soma = 0;
+
+      for (let i = 0; i < num.length; i++) {
+        if (num[i] % 2 !== 0) {
+          //verifica se é impar
+          console.log(num[i]);
+          soma += num[i];
+          imp[cont] = num[i];
+          cont++;
+        }
+      }
+      alert("Os valores ímpares são: " + imp);
+      alert("A soma dos valores é: " + soma);
+    </script>
+  </body>
+</html>

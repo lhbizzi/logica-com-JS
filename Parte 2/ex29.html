@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <button onclick="comeback()">Return</button>
+    <input type="text" id="input" />
+    <button onclick="add()">Add</button>
+    <button onclick="advanceValue()">Advance</button>
+    <div id="output"></div>
+
+    <script>
+      let valueonPop = [];
+      class History {
+        constructor(limit) {
+          this.items = [];
+          this.limit = limit || 5;
+        }
+        add(item) {
+          if (this.items.length < this.limit) {
+            this.items.push(item);
+          } else {
+            this.#removeOlder();
+            this.items.push(item);
+          }
+        }
+        #removeOlder() {
+          if (this.items.length > 0) {
+            return this.items.shift();
+          } else {
+            alert("history is empty");
+          }
+        }
+        #removeYounger() {
+          if (this.items.length > 0) {
+            valueonPop.push(this.items.pop());
+            return valueonPop;
+          } else {
+            alert("history is empty");
+          }
+        }
+        returnValue() {
+          if (this.items.length > 0) {
+            this.#removeYounger();
+            return true;
+          } else {
+            return false;
+          }
+        }
+        advanceValue() {
+          if (this.items.length > 0 && this.items.length < this.limit) {
+            this.add(valueonPop.pop());
+            return true;
+          } else {
+            return false;
+          }
+        }
+        show() {
+          return this.items.toString();
+        }
+        showYounger() {
+          return this.items[this.items.length - 1];
+        }
+      }
+
+      const history = new History(5);
+
+      function comeback() {
+        if (history.returnValue()) {
+          show();
+        }
+      }
+
+      function add() {
+        const input = document.getElementById("input");
+        if (input.value) {
+          history.add(input.value);
+          show();
+          input.value = "";
+          input.focus();
+        }
+      }
+
+      function advanceValue() {
+        if (history.advanceValue()) {
+          show();
+        }
+      }
+
+      function show() {
+        document.getElementById("output").textContent = history.show() + " - atual: " + history.showYounger();
+      }
+    </script>
+  </body>
+</html>

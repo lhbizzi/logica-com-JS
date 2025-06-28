@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <ul id="output"></ul>
+    <script>
+      const alunos = [
+        {
+          nome: "Joaquim",
+          notas: [1, 3, 3, 8],
+        },
+        {
+          nome: "Maria",
+          notas: [10, 6, 3, 2],
+        },
+      ];
+
+      const output = document.getElementById("output");
+      let objHTML = ``;
+      let soma = 0;
+      let media = 0;
+
+      for (let i = 0; i < alunos.length; i++) {
+        soma = alunos[i].notas.reduce((acc, nota) => acc + nota, 0);
+        media = soma / alunos[i].notas.length;
+        objHTML += `<li>Nome: ${alunos[i].nome}, Media: ${media}</li>`;
+      }
+
+      output.innerHTML = objHTML;
+    </script>
+  </body>
+</html>

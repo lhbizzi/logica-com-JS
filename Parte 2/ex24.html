@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Prog em JS</title>
+    <meta charset="Utf-8" />
+  </head>
+  <body>
+    <h1>Lógica de Prog em JS</h1>
+    <div id="output"></div>
+    <script>
+      let num = parseFloat(prompt("Informe um número: "));
+      let resultado = false;
+
+      itsPair();
+
+      if (resultado) {
+        document.getElementById("output").innerHTML = `O número ${num} é par. Portanto é: ${resultado}`;
+      } else {
+        document.getElementById("output").innerHTML = `O número ${num} é impar. Portanto é: ${resultado}`;
+      }
+
+      function itsPair() {
+        if (num % 2 == 0) {
+          return (resultado = true);
+        } else {
+          return (resultado = false);
+        }
+      }
+    </script>
+  </body>
+</html>
